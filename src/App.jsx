@@ -77,30 +77,10 @@ function App() {
               path="/dashboard"
               element={
                 <ProtectedRoute>
-                  {/* <MainLayout> */}
                   <Dashboard />
-                  {/* </MainLayout> */}
                 </ProtectedRoute>
               }
             />
-
-            {/* <Route
-              path="/tasks"
-              element={
-                <ProtectedRoute>
-                  <Tasks />
-                </ProtectedRoute>
-              }
-            />
-
-            <Route
-              path="/create-task"
-              element={
-                <ProtectedRoute>
-                  <CreateTask />
-                </ProtectedRoute>
-              }
-            /> */}
 
             <Route
               path="/users"

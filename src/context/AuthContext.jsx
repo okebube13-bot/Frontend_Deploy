@@ -44,18 +44,27 @@ export const AuthProvider = ({ children }) => {
   };
 
   const login = async (email, password) => {
-    const res = await fetch(`${API_URL}/auth/login`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
-    });
-    const data = await res.json();
-    if (!res.ok) throw new Error(data.message);
+    try {
+      const res = await fetch(`${API_URL}/auth/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
 
-    localStorage.setItem("token", data.token);
-    setToken(data.token);
-    setUser(data);
-    return data;
+      const data = await res.json();
+
+      if (!res.ok) {
+        return { success: false, message: data.message };
+      }
+
+      localStorage.setItem("token", data.token);
+      setToken(data.token);
+      setUser(data.user);
+
+      return { success: true, user: data.user };
+    } catch (err) {
+      return { success: false, message: "Network error" };
+    }
   };
 
   const register = async ({ name, email, password }) => {
