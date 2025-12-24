@@ -177,7 +177,7 @@ const Register = () => {
             {/* Role Information */}
             <div className="bg-blue-50 border border-blue-200 rounded-md p-4 text-blue-700 text-sm">
               <p>
-                All new accounts are created as <strong>Staff</strong> by
+                All new accounts are created as <strong>Student</strong> by
                 default. Manager accounts can only be created by existing
                 managers.
               </p>
