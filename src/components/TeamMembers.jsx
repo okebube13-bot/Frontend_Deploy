@@ -36,6 +36,10 @@ export default function TeamMembers({ users, role }) {
           ))}
         </div>
       </div>
+
+      <div>
+        <p className="text-5xl font-bold ">+</p>
+      </div>
     </div>
   );
 }
