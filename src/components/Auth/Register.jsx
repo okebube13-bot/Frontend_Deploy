@@ -78,7 +78,7 @@ const Register = () => {
       <div className="sm:mx-auto sm:w-full sm:max-w-md text-center">
         <div className="flex justify-center">
           <div className="h-12 w-12 bg-blue-600 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-lg">VTM</span>
+            <span className="text-white font-bold text-lg">VTMS</span>
           </div>
         </div>
         <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
